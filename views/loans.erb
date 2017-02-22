@@ -1,0 +1,11 @@
+<h1>List of debtors</h1>
+
+<div class="lines"></div>
+
+  <ul id="list">
+    <% @loans.each() do |loan| %>
+    <!-- attaches the id to a particular debtor -->
+    <li><a href="/loans/<%= loan.id() %>"><%= loan.name() %></a></li>
+    <% end %>
+  </ul>
+<a href="/">Home</a>
