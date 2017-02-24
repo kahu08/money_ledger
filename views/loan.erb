@@ -1,5 +1,7 @@
-<h2><%= @loan.name()%> owes you:</h2>
-<h4><%= @loan.amount()%></h4>
-<h4><%= @loan.time()%></h4>
-<h4><%= @loan.total()%></h4>
+<div class="loan">
+    <h2><%= @loan.name()%> loaned you:</h2>
+  <h4>Ksh. <%= @loan.amount()%></h4>
+  <h4>To return: Ksh.<%= @loan.total()%></h4>
+  <h4>in <%= @loan.time()%> year</h4>
+</div>
 <!-- <h4>To return on:<%= @date%></h4> -->
