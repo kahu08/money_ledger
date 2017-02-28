@@ -44,22 +44,22 @@ get('/loans/:id') do
 end
 
 ####################################
-# get('/debts') do
-#   @debts = Debt.all()
-#   erb(:debts)
-# end
-#
-# #user submits form and values fetched to create new loaner
-# post('/debts') do
-#   name = params.fetch("name").to_s()
-#   amount = params.fetch("amount").to_i()
-#   time = params.fetch("time").to_i()
-#   Debt.new({:name=> name, :amount => amount, :time => time}).save()
-#   erb(:success)
-# end
-#
-# # user requests to see a particular loaner
-# get('/debts/:id') do
-#   @debt = Debt.find(params.fetch("id"))
-#   erb(:debt)
-# end
+get('/debts') do
+  @debts = Debt.all()
+  erb(:debts)
+end
+
+#user submits form and values fetched to create new loaner
+post('/debts') do
+  name = params.fetch("name").to_s()
+  amount = params.fetch("amount").to_i()
+  time = params.fetch("time").to_i()
+  Debt.new({:name=> name, :amount => amount, :time => time}).save()
+  erb(:success)
+end
+
+# user requests to see a particular loaner
+get('/debts/:id') do
+  @debt = Debt.find(params.fetch("id"))
+  erb(:debt)
+end
